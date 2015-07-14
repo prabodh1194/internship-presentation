@@ -99,17 +99,26 @@
                     <section><h3>How does it work?</h3></section>
                     <section data-background="img/guide-table-1.png" data-background-size="400px"></section>
                     <section data-background="img/guide-table-2.png" data-background-size="400px"></section>
+                    <section>
+                        <img src="img/1471-2105-15-198-1-l.jpg"/>
+                        <p><cite><a href="http://www.biomedcentral.com/1471-2164/14/297">Reference</a></cite></p>
+                    </section>
+                    <section>
+                        <img src="img/1471-2105-15-198-3-l.jpg" height="600px"/>
+                        <small><p>Display of both INS_FRAGMT and INV_INS_FRAGMT links predicted by SVDetect and NM links.</p></small>
+                    </section>
                 </section>
+
 
                 <section>
                     <h1>That's about circos</h1>
                     <p><small>visit <a href="http://mkweb.bcgsc.ca/">Martin
                                 Krzywinski</a> and his awesome <a
-                                        href="http://circos.ca">tool</a></small></p>
+                                        href="http://circos.ca">tool @ http://circo.ca</a></small></p>
                 </section>
 
                 <section>
-                    <h2>My Project</h2>
+                    <h2>The Project</h2>
                     <ul>
                         <li class="fragment">Implement Circos as a <strong>webapp</strong></li>
                         <li class="fragment">Write an <strong>API</strong> for flexible usage</li>
@@ -140,7 +149,7 @@
                     </section>
                     <section>
                         <p>D3 comes bundled with API to make <a
-                                    href="http://bl.ocks.org/mbostock/4062006">chord
+                                    href="http://bl.ocks.org/mbostock/4062006" target="_blank">chord
                                 diagrams</a> which include data processor and
                             SVG generator</p>
                     </section>
@@ -161,27 +170,86 @@
                     </section>
                     <section>
                         <h2>Code</h2>
-                        <pre><code data-trim contenteditable>
-    function linkify( selector ) {
-      if( supports3DTransforms ) {
-
-        var nodes = document.querySelectorAll( selector );
-
-        for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-          var node = nodes[i];
-
-          if( !node.className ) {
-            node.className += ' roll';
-          }
+                        <pre><code data-trim>
+    circos.generate({
+        'circosInfo':{
+            'zoom':[1,10],
+            'scaleInfo':{'scale':1,'stepAngle':1.8,'labelGap':5},
+            'chordData':crdata,
+            'arcData':ardata
         }
-      }
-    }
+    });
                         </code></pre>
-                        <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+                        <p>This is the minimum code you'll need to write to get your first chart<a href="http://melghat.strandls.com:8080/webtrial/chromo/boilerplate.html" target="_blank"> boilerplate</a>.</p>
                     </section>
                 </section>
-		    </div>
 
+                <section>
+                    <h1>Voila!</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>The Chart</h2>
+                    </section>
+
+                    <section>
+                        <h2>The chart is in elements</h2>
+                        <ul>
+                            <li>Core</li>
+                            <li>Concentric Rings</li>
+                            <li>Circular Area Chart</li>
+                            <li>Circular Bar Chart</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <img src="img/circosPlot.png"/>
+                    </section>
+
+                    <section>
+                        <h2>Customize</h2>
+                        <ul>
+                            <li class="fragment">Size of chart</li>
+                            <li class="fragment">Element positioning</li>
+                            <li class="fragment">Color fill</li>
+                            <li class="fragment">Booundary/stroke colors</li>
+                            <li class="fragment">Labelling</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p><h2>Creative data</h2></p>
+                        <p><h3>Pretty chart</h3></p>
+                    </section>
+                </section>
+
+                <section data-background="img/tableviewer-01.png" data-background-size="1000px"></section>
+
+                <section>
+                    <h1><a href="http://melghat.strandls.com:8080/webtrial/chromo">Wait is over</a></h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Technologies/libraries used</h3>
+                    </section>
+
+                    <section data-background="#ffffff">
+                        <img src="img/D3.js-Logo.png"/>
+                    </section>
+
+                    <section data-background="#e3e4e5">
+                        <img src="img/html5_css_javascript.png"/>
+                    </section>
+
+                    <section>
+                        <h3>C3.js</h3>
+                        <p>For syntactical similarities and coding style is adopted to make the API</p>
+                    </section>
+
+                </section>
+		    </div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
