@@ -1,5 +1,5 @@
 # internship-presentation
-Just clone the repo and go go to the folder and fire a server.
+Just clone the repo and go to the folder and fire a server.
 
 e.g.
 ```
